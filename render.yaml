@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: japanika-proxy
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
